@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ka;eng">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th{
+            text-align:center;
+        }
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>
+                Control tyle
+            </th>
+            <th>
+                Data
+            </th>
+            <th>
+                Control
+            </th>
+        </tr>
+        <tr>
+            <td>Text box</td>
+            <td>Name : </td>
+            <td>
+                <form action="" method="GET">
+                    <input type="text" name="Name" maxlength="12" placeholder="Enter Name">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>Password</td>
+            <td>
+                <input type="password" name="Password">
+            </td>
+        </tr>
+        <tr>
+            <td>Text area</td>
+            <td>Adress</td>
+            <td>
+                <textarea name="Adress" placeholder="Enter adress" style="resize:none"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Drop down list</td>
+            <td>area</td>
+            <td style="text-align:left">
+                <select>
+                    <option value="Center">Center</option>
+                    <option value="NORTH">NORTH</option>
+                    <option value="EAST">EAST</option>
+                    <option value="WEST">WEST</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Check box</td>
+            <td>Hobbies</td>
+            <td style="text-align: left">
+                <fieldset>
+                    <input type="checkbox" name="SPORT" value="SPORT"> SPORT
+                    <br>
+                    <input type="checkbox" name="READING" value="READING">READING
+                    <br>
+                    <input type="checkbox" name="T.V" value="T.V">TV
+                    <br>
+                    <input type="checkbox" name="Internet" value="Internet">INTERNET
+                    <br>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>Radio buttons</td>
+            <td>Gender</td>
+            <td>
+                <fieldset>
+                    <legend>Gender Selection</legend>
+                    <input type="radio" name="gender" value="male">Male <br>
+                    <input type="radio" name="gender" value="female">Female
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td>File upload</td>
+            <td>Your image:</td>
+            <td> <input type="file" name="pic" accept="image/*"> </td>
+        </tr>
+        <tr>
+            <td>Buttons</td>
+            <td>Actions : </td>
+            <td>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" onclick="alert('Sabaia....')">Button</button>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

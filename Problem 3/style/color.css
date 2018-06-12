@@ -1,0 +1,58 @@
+.Circles div{
+    display:inline-block;
+    margin:80px;
+    margin-right: 100px;
+}
+
+#rCircle{
+    color:red;
+    background-color: red;
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+}
+#gCircle{
+    color:green;
+    background-color:green;
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+}
+#pCircle{
+    background-color:pink;
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+}
+
+#bCircle{
+    background-color: blue;
+    height: 200px;
+    width:200px;
+    border-radius: 50%;
+}
+
+#Rect{
+    display: block;
+    background-color: yellowgreen;
+    width:300px;
+    height: 200px;
+    margin:auto;
+    margin-block-start: 50%;
+}
+
+
+#gCircle:hover ~ #Rect{
+    background-color:green;
+}
+
+#bCircle:hover ~ #Rect{
+    background-color:blue;
+}
+#pCircle:hover ~ #Rect{
+    background-color:pink;
+}
+
+#rCircle:hover ~ #Rect{
+    background-color:red;
+}
