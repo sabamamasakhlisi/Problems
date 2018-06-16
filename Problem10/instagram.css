@@ -1,0 +1,74 @@
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    min-height: 100%;
+}
+
+body{
+    /* background-image : linear-gradient(to right top , #F58529 ,#FEDA77,#DD2A7B ,#8134AF , #515BD4 ); */
+    background-color: lightslategrey;
+}
+
+.main{
+    /* margin-top:50px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.Start img{
+    width : 320px;
+    height: 320px;
+}
+.Profile img{
+    width : 320px;
+    height: 320px;
+}
+.head img{
+    width : 150px;
+    height: 150px;
+}
+.head{
+    width: auto;
+}
+
+.head h3{
+    display: inline-block;
+    font-size: 32px;
+    color: #fff;
+  font-family: monospace;
+  overflow: hidden; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  white-space: nowrap;
+  animation: 
+    type 3s;
+}
+
+ @keyframes type {
+    0%{
+        width: 0ch;
+    }
+    100%{
+        width: 22ch;
+    }
+  }
+
+
+@media screen  and (max-width : 620px){
+    .main img{
+        width: calc(100%);
+        height: calc(100%);
+        margin-top: 120px;
+    }
+    .head img{
+        width: calc(20%);
+        height: calc(20%);
+    }
+    .head h3{
+        font-size : 20px;
+    }
+}
+
