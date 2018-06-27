@@ -1,4 +1,6 @@
-// //ex1 
+//ყველა დავალებაა შაბათს გარჩეული + ორშაბათის დავალება , გაძლიერებული კალკულატორი და car დაკომენატარებული არ არის
+
+//#region ex1
 // 'use strict'
 
 // let product = new Object ();
@@ -13,8 +15,9 @@
 // delete(product.price);
 // console.log(product.price);
 
+//#endregion ex1
 
-// //ex2 
+//#region ex2
 
 // let salaries = {
 //     John : 100,
@@ -27,7 +30,8 @@
 //     sum+=salaries[key];
 // }
 // console.log(sum);
-
+//#endregion ex2
+//#region ex3
 // //ex3 
 // let calculator = {
 //     read (){
@@ -43,7 +47,8 @@
 // }
 // calculator.read();
 // console.log(calculator.sum(),calculator.mul());
-
+//#endregion ex3
+//#region ex4
 // // //ex4
 // // function makeUser(){
 // //     return{
@@ -54,7 +59,8 @@
 
 // // let user = makeUser();
 // // alert(user.ref.name);
-
+//#endregion ex4
+//#region ex5
 // //ex5
 // let ladder = {
 //     step : 0,
@@ -71,7 +77,9 @@
 //     }
 // }
 // ladder.up().up().down().showStep();
+//#endregion ex5
 
+//#region ex6
 // //ex6
 // function Calculator (){
 //     this.read =function(){
@@ -90,8 +98,9 @@
 // calculatorS.read();
 // alert("Sum :" + calculatorS.sum());
 // alert("Mul : " + calculatorS.mul());
-
-// //ex7
+//#endregion ex6
+//#region ex7
+//ex7
 // function Acumulator(stringValue){
 //     this.value  = stringValue;
 //     this.read = function(){
@@ -104,6 +113,7 @@
 // acumulator.read();
 // acumulator.read();
 // console.log(acumulator.value);
+//#endregion ex7
 
 //ex8
 function Calculator () {
