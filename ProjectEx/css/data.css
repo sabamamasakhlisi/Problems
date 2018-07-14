@@ -1,0 +1,523 @@
+*{
+    padding : 0;
+    margin : 0;
+}
+body{
+    background-color: lightgrey;
+}
+
+header img {
+    position: fixed;
+    right : 0;
+}
+
+
+.back{
+    display: flex;
+    flex-flow: wrap row;
+    align-items: stretch;
+}
+.halfBack{
+    flex-grow: 1;
+    height: max-content;
+}
+
+.anotherHalfBack{
+    flex-grow : 10;
+    background-color: darkgray;
+    height : 49.6em;
+}
+
+.halfBack h2{
+    color : #042331;
+    text-shadow: 2px 2px 4px #000;
+    font-family: cursive;
+}
+
+.dataN{
+    padding : 20px;
+    background-color: lightgrey;
+    margin-top : calc(5%);
+    display: flex;
+}
+.dataN h2{
+    color : #042331;
+    text-shadow: 2px 2px 4px #000;
+    margin-top : 2px;
+    font-family: cursive;
+}
+
+.dataN div:nth-child(2){
+    margin-left : 50px;
+}
+
+.dataN div:nth-child(3){
+    margin-left : 20px;
+}
+.dataN div:nth-child(4){
+    margin-left: 20px;
+}
+ul{
+    line-height: 100px;
+}
+ul li{
+    font-size : 20px;
+    color : #042331;
+    text-shadow: 1px 1px 2px #000;
+}
+
+ul li p{
+    display: inline-block;
+    margin-left : 20px;
+}
+
+
+
+#add {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s ease all;
+  }
+  #add:hover {
+    color: #FFF;
+  }
+  #add:focus {
+    color: #FFF;
+  }
+  
+  #remove {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s ease all;
+  }
+  #remove:hover {
+    color: #FFF;
+  }
+  #remove:focus {
+    color: #FFF;
+  }
+
+  #student {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s ease all;
+  }
+  #student:hover {
+    color: #FFF;
+  }
+  #student:focus {
+    color: #FFF;
+  }
+
+#add {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid rgb(18, 161, 18);
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  cursor : pointer;
+outline : none;
+visibility: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#add:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: rgb(18, 161, 18);
+  z-index: -2;
+  cursor : pointer;
+}
+#add:hover:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  cursor : pointer;
+}
+#add:focus:before {
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  cursor : pointer;
+}
+#add:active{
+    outline : none;
+}
+#remove {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  font-weight: bold;
+  padding: 14px 0px;
+  border: 3px solid rgb(185, 19, 19);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  cursor : pointer;
+  outline : none;
+  visibility: hidden;
+}
+#remove:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: rgb(185, 19, 19);
+  z-index: -2;
+}
+#remove:hover:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+#remove:focus:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+
+#student {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    font-weight: bold;
+    padding: 14px 0px;
+    border: 3px solid #21769d;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    cursor : pointer;
+    outline : none;
+    margin-right : 10px;
+  }
+  #student:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #21769d;
+    z-index: -2;
+  }
+  #student:hover:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  #student:focus:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+#main{
+    height: 600px;
+    width: 900px;
+    overflow : auto;
+    display: flex;
+}
+
+
+  #nameList{
+      display: flex;
+      flex-direction: column;
+  
+  }
+
+  #nameList div{
+    width : 200px;
+    padding : 10px;
+
+  }
+  #nameList div h4{
+    color : #042331;
+    text-shadow: 1px 1px 1px #000;
+    font-family: cursive;
+  }
+  
+  #nameList input {
+      width : 200px;
+      padding : 10px;
+      outline: none;
+      background-color: dimgrey;
+      color: white;
+  }
+#nameList input::-webkit-input-placeholder{
+ color : white;
+}
+
+#average0{
+    padding : 10px;
+    width : 100px;
+    text-align: center;
+}
+
+#average0 h4{
+    color : #042331;
+    text-shadow: 1px 1px 1px #000;
+    font-family: cursive;
+    
+}
+
+#average0 ~ div{
+    background-color: teal;
+    padding : 10px;
+    width : 100px;
+    height : 16.9px;
+    border : 1px solid darkgray;
+    color : white;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.day div:first-child{ 
+    color : #042331;
+    font-size  : 9px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding : 10px;
+    width : 50px;
+    line-height: 23px;
+   font : bold;
+    pointer-events: none;
+}
+
+.day div:first-child ~ div{
+    background-color: crimson;
+    text-align: center;
+    height : 16.9px;
+    width : 50px;
+    border : 1px solid darkgray;
+    color : white;
+    padding : 10px;
+     cursor : pointer;
+}
+
+#back img{
+    position : absolute;
+    bottom : 0;
+    left : 0;
+    width : 50px;
+    height : 50px;
+}
+#inf img{
+    position: absolute;
+    width : 50px;
+    height : 50px;
+    bottom : 0;
+    left : 60px;
+}
+
+
+
+@media screen and (min-width : 531px) and (max-width:1150px){
+    .header{
+        position: relative;
+        right : 0;
+    }
+    .halfBack{
+        order : 1;
+        width: 100%;
+        height: 400px;
+    }
+    .anotherHalfBack{
+        order : 2;
+         width: 100%;
+     }
+     .dataN{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+     }
+     .dataN div:nth-child(2){
+         order : 2;
+       
+     }
+     .dataN div:nth-child(3){
+        order : 3;
+    }
+    .dataN div:nth-child(4){
+        order : 4;
+    }
+   
+    #add {
+        width : 95%;
+        font-size : 14px;
+    }
+    #student{
+        width : 95%;
+        font-size : 14px;
+    }
+    #remove{
+        width : 99%;
+        font-size : 14px;
+    }
+
+    #main{
+        max-width : 80%;
+        height: 20%;
+        overflow : scroll;
+    }
+   
+    #nameList div h4{
+        font-size: 10px;
+    }
+    #average0 h4{
+        font-size: 10px;
+    }
+    #inf img{
+       
+        width : 50px;
+        height : 50px;
+        top : 350px;
+        margin-left : 75%;
+    }
+    #back img{
+      
+        top: 350px;
+        left : 0;
+        width : 50px;
+        height : 50px;
+        margin-left : 65%;
+    }
+ 
+}
+
+@media screen and (max-width : 530px){
+  
+    .halfBack{
+        order : 1;
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
+    .anotherHalfBack{
+        order : 2;
+         width: 100%;
+     }
+     .dataN{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+     }
+     .dataN div:nth-child(2){
+         order : 2;
+       
+     }
+     .dataN div:nth-child(3){
+        order : 3;
+    }
+    .dataN div:nth-child(4){
+        order : 4;
+    }
+   
+    #add {
+        width : 95%;
+        font-size : 14px;
+    }
+    #student{
+        width : 95%;
+        font-size : 14px;
+    }
+    #remove{
+        width : 99%;
+        font-size : 14px;
+    }
+    #nameList {
+        width : 20%;
+    }
+    #average{
+        width: 20%;
+        
+    }
+    #nameList input{
+        width : 60%;
+    }
+    #average div{
+        width : 60%;
+    }
+    #main{
+        max-width : 80%;
+        overflow : scroll;
+    }
+    #hub{
+        position : absolute;
+        top: 360px;
+        right : 0;
+        
+    }
+    #nameList div h4{
+        font-size: 10px;
+        max-width : 10px;
+    }
+    #average0{
+        height : 42px;
+    }
+    #average0 h4{
+        font-size: 10px;
+        
+    }
+    .day div:first-child{
+        height: 42px;
+    }
+    #inf img{
+    
+        width : 50px;
+        height : 50px;
+        top : 0;
+        margin-left : 400px;
+        
+    }
+    #back img{
+        top: 0;
+        margin-left : 360px;
+        width : 50px;
+        height : 50px;
+    }
+}
+
