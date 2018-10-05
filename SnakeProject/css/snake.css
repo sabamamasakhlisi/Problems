@@ -1,0 +1,554 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700&subset=cyrillic');
+*{
+    padding : 0;
+    margin : 0;
+}
+
+body{
+    background-color: #222222;
+    height : 100%;
+}
+html{
+    height : 100%;
+}
+.startIm {
+    background-image: url(snake.img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top:600px;
+    margin-bottom:120px;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ }
+ 
+ @-webkit-keyframes fade {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(-20px);
+    }
+    50% {
+       opacity: 1;
+       -webkit-transform: translateY(0);
+    }
+ }
+ 
+ @keyframes fade {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    50% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+    100%{
+        opacity:0;
+    }
+ }
+ 
+ .fade {
+    -webkit-animation-name: fade;
+    animation-name: fade;
+ }
+
+ .container{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ #canvas {
+
+    margin-top : 5%;
+
+ }
+
+ .header{
+    position : absolute;
+    top : 0;
+    left : 0;
+     visibility: hidden;
+ }
+ #shota{
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     font-size : 24px;
+     color : grey;
+     max-width : 400px;
+ }
+
+ #gNode{
+     z-index : 2;
+     position: absolute;
+ }
+ #iNode{
+     margin-top : 80px;
+     z-index : 2;
+     position: absolute;
+ }
+ #oNode{
+     margin-top : 160px;
+     z-index : 2;
+     position : absolute;
+ }
+ #gNode , #iNode ,#oNode , #high  {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: grey;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    background-size: 300% 100%;
+}
+#pl{
+    margin-left : 20%;
+    margin-top : 5%;
+    position : absolute;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    color: grey;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    background-size: 300% 100%;
+}
+#cont{
+    margin-left : 20%;
+    margin-top : 15%;
+    position : absolute;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    color: grey;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    background-size: 300% 100%;
+}
+#cont:hover{
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    outline: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#gNode:hover {
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    outline: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#pl:hover{
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    outline: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#iNode:hover{
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    outline: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#gNode :focus {
+    outline: none;
+}
+#iNode :focus {
+    outline : none;
+}
+#oNode:hover{
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    outline: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#oNode :focus {
+    outline: none;
+}
+#high:hover{
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    outline: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#high :focus {
+    outline: none;
+}
+#high{
+    position : absolute;
+    z-index: 2;
+    margin-top : 240px;
+}
+#oNode:active {
+    outline : none;
+    border : none;
+}
+
+#snakeN {
+	display: inline;
+	position: absolute;
+	font: 180px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+    /* color: rgba(93, 93, 180, 0.075);  */
+    color :  #2b5876;
+    margin-top: -150px;
+}
+
+#snakeN:after {
+	content: "SNAKE";
+	position: absolute; left: 10px; top: 5px;
+    /* color: rgba(17, 18, 54, 0.5);   
+     */
+    color :#4e4376;
+}
+
+#dif {
+    display: inline;
+	position: absolute;
+	font: 32px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+    /* color: rgba(93, 93, 180, 0.075);  */
+    color :  #2b5876;
+    left : 32%;
+    top : 20%;
+}
+#dif:after {
+	content: "SELECT DIFFICULTY";
+	position: absolute; left: 10px; top: 5px;
+    /* color: rgba(17, 18, 54, 0.5);   
+     */
+    color :#4e4376;
+}
+
+#sp {
+    display: inline;
+	position: absolute;
+	font: 32px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+    /* color: rgba(93, 93, 180, 0.075);  */
+    color :  #2b5876;
+    left : 32%;
+    top : 48%;
+}
+#sp::after{
+    content: "SELECT SPEED";
+	position: absolute; left: 10px; top: 5px;
+    /* color: rgba(17, 18, 54, 0.5);   
+     */
+    color :#4e4376;
+}
+#apph3 {
+    display: inline;
+	position: absolute;
+	font: 32px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+    /* color: rgba(93, 93, 180, 0.075);  */
+    color :  #2b5876;
+    left : 32%;
+    top : 61%;
+}
+#apph3::after{
+    content: "Quantity of Apple";
+	position: absolute; left: 10px; top: 5px;
+    /* color: rgba(17, 18, 54, 0.5);   
+     */
+    color :#4e4376;
+}
+
+#szh3{
+    display: inline;
+	position: absolute;
+	font: 32px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+    /* color: rgba(93, 93, 180, 0.075);  */
+    color :  #2b5876;
+    left : 32%;
+    top : 76%;
+}
+#szh3::after{
+    content: "Size of Board";
+	position: absolute; left: 10px; top: 5px;
+    /* color: rgba(17, 18, 54, 0.5);   
+     */
+    color :#4e4376;
+}
+
+#random{
+    position: absolute;
+    top : 64%;
+    left : 50%;
+    width: 200px;
+    font-size: 10px;
+    font-weight: 200;
+    color: grey;
+    cursor: pointer;
+    height: 25px;
+    text-align:center;
+    border: none;
+    border-radius: 10px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    background-size: 300% 100%;
+    outline-color: none;
+}
+#random :active::after{
+    outline : none;
+}
+
+
+.block {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 26px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color  : grey;
+}
+
+.block1{
+    position: absolute;
+    top : 30%;
+    left : 50%;
+    margin-top : 30px;
+}
+.block0{
+    position: absolute;
+    top : 30%;
+    left : 50%;
+}
+.block2{
+    position: absolute;
+    top : 30%;
+    left : 50%;
+    margin-top : 60px;
+}
+/* Hide the browser's default radio button */
+.block input {
+    /* position: absolute; */
+    opacity: 0;
+    cursor: pointer;
+    width : 25px;
+    height : 25px;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    height: 25px;
+    width: 25px;
+    background-color: rgba(0, 159, 233, 0.493);
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.block:hover input ~ .checkmark {
+    background-color: rgb(78, 40, 104);
+}
+
+/* When the radio button is checked, add a blue background */
+.block input:checked ~ .checkmark {
+    background-color: rgb(9, 40, 66);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.block input:checked ~ .checkmark:after {
+    display : block;
+}
+
+/* Style the indicator (dot/circle) */
+.block .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background:rgb(142, 11, 202);
+}
+
+
+.wrp{
+    position: absolute;
+    margin-top : 5%;       
+    margin-left : 4px; 
+}
+.wrp label{
+    font-size: 26px;
+    color : grey;
+}
+
+
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    top : 70%;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #8d1a9c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+select{
+    color : grey;
+    background-color: #8d1a9c;
+}
+
+.dropdown-content option {
+    color: grey;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content p:hover {background-color: rgb(94, 39, 165);}
+
+.dropdown:hover .dropdown-content {display: block};
+
+.dropdown:hover .dropbtn {background-color: #8d29ac;}
+
+#score{
+    display: right;
+    background-image: linear-gradient(#8d29ac,rgb(94, 39, 165));
+    font-size: 30px;
+}
+
+#gm{
+    justify-content: center;
+    align-content: center;
+    width : 400px;
+    height: 400px;
+}
+
+#again{
+   position : absolute;
+   margin-top : 15%;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    color: grey;
+    font-size : 20px;
+    cursor: pointer;
+    height: 55px;
+    text-align:center;
+    border: none;
+    border-radius: 50px;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+    box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+    background-size: 300% 100%;
+}
+#again:hover{
+    background-position: 100% 0;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    outline: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+#exit{
+    position : absolute;
+    margin-top : 20%;
+     width: 100px;
+     font-size: 16px;
+     font-weight: 400;
+     color: grey;
+     font-size : 20px;
+     cursor: pointer;
+     height: 55px;
+     text-align:center;
+     border: none;
+     border-radius: 50px;
+     -moz-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;
+     -webkit-transition: all .4s ease-in-out;
+     transition: all .4s ease-in-out;
+     background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+     box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+     background-size: 300% 100%;
+ }
+ #exit:hover{
+     background-position: 100% 0;
+     -moz-transition: all .4s ease-in-out;
+     -o-transition: all .4s ease-in-out;
+     -webkit-transition: all .4s ease-in-out;
+     transition: all .4s ease-in-out;
+     outline: none;
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+ }
