@@ -83,6 +83,7 @@ function gameMode() {
                 data.lengthDefault = lengthDefault;
                 data.applN = appleCount;
                 data.canSi = canSize;
+                data.highscore = highscore;
                 data.gmode = manageSpeed();
                 manageData();
                 console.log(manageSpeed());
@@ -281,6 +282,7 @@ class Data {
 
  if (storage.getItem(STORAGE_KEY) != null) {
     getData();
+    highscore = data.highscore;
     iHaveDefaults = true;
 } else {
     data = new Data();
@@ -520,7 +522,6 @@ function endOfGame () {
         highscore=score;
         data.highscore=highscore;
         manageData();
-
     }
     endeSpiel();
     
