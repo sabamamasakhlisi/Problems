@@ -432,7 +432,11 @@ function game () {
         console.log(snakeX,snakeY);
         clearInterval(game_loop);
         localStorage.clear();
-
+      if(score>=highscore) {
+        highscore=score;
+        data.highscore=highscore;
+        manageData();
+    }
         endOfGame();
     }
     for (let i = 0; i < serpant.snake.length; i++) {
@@ -519,11 +523,6 @@ function endOfGame () {
     exit.appendChild(txx);
     exit.id = "exit";
     document.getElementsByClassName("container")[0].appendChild(exit);
-    if(score>=highscore) {
-        highscore=score;
-        data.highscore=highscore;
-        manageData();
-    }
     endeSpiel();
     
     againSpiel();
