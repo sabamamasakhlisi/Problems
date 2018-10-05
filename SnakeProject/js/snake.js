@@ -83,6 +83,7 @@ function gameMode() {
                 data.lengthDefault = lengthDefault;
                 data.applN = appleCount;
                 data.canSi = canSize;
+                highscore = data.highscore;
                 data.highscore = highscore;
                 data.gmode = manageSpeed();
                 manageData();
